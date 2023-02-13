@@ -3,7 +3,7 @@ require("../../Core.js");
 
 module.exports = {
   name: "demote",
-  alias: ["ZZ"],
+  alias: ["zz"],
   desc: "Demote a member",
   category: "Group",
   usage: "demote @user",
