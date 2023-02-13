@@ -5,13 +5,13 @@ module.exports = {
     name: "script",
     alias: ["repo","sc","sourcecode"],
     desc: "Say hello to bot.",
-    react: "🍁",
+    react: "📁",
     category: "Core",
     start: async(Miku, m,{pushName,prefix}) => {
         let picURL = fs.readFileSync('./Page/BG.jpg')
         let repoInfo = await axios.get('https://api.github.com/repos/FantoX001/Atlas-MD')
         let repo = repoInfo.data
-        let txt = `      🧣 *${botName}'s Script* 🧣\n\n*🎀 Total Forks:* ${repo.forks_count}\n*⭐ Total Stars:* ${repo.stargazers_count}\n*📜 License:* ${repo.license.name}\n*📁 Repo Size:* ${(repo.size/1024).toFixed(2)} MB\n*📅 Last Updated:* ${repo.updated_at}\n\n*🔗 Repo Link:* ${repo.html_url}\n\n❝ Dont forget to give a Star ⭐ to the repo. It's made with restless harkwork by *Team ATLAS*. ❞\n\n*©️ Team ATLAS- 2023*`
+        let txt = `      🧣 *${botName}'s HOME* 🧣\n\n*⚠️ 𝚃𝙾𝙼𝙰𝙽:* https://chat.whatsapp.com/JTTwcmElglZEKmPNrg8VRA\n\n*⚠️ ⭑⭑⭑★ 𝐁𝐎𝐍𝐓𝐄𝐍 ★⭑⭑⭑:* https://chat.whatsapp.com/CQKbWP7c3GNIk4SfE7Xej7\n\n\n*©️ 𝚁𝚎𝚐𝚊𝚛𝚍𝚜 - 𝙷𝙾𝙿𝙴*`
         await Miku.sendMessage(m.from,{image:picURL, caption:txt},{quoted:m});
     }
 }
